@@ -36,10 +36,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Alhambra">
-      <HintPath>..\packages\Alhambra.0.0.5\lib\Alhambra.dll</HintPath>
+      <HintPath>..\packages\Alhambra.0.0.6\lib\Alhambra.dll</HintPath>
     </Reference>
     <Reference Include="ObjectTypeConvertExtentions">
-      <HintPath>..\packages\ObjectTypeConvertExtentions.0.0.4\lib\ObjectTypeConvertExtentions.dll</HintPath>
+      <HintPath>..\packages\ObjectTypeConvertExtentions.0.0.5\lib\ObjectTypeConvertExtentions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,17 +66,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
     <Compile Include="ClassTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>ClassTemplate.cs</LastGenOutput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Plugins\Alhambra.Plugin.SqlServer.dll" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Plugins\Alhambra.Plugin.SqlServer.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
