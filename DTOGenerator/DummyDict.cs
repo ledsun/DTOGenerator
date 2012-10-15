@@ -22,5 +22,10 @@ namespace DTOGenerator
             this[typeof(DateTime).Name][0] = "new DateTime(2012,1,1)";
             this[typeof(DateTime).Name][1] = "new DateTime(2012,2,1)";
         }
+
+        public string GetParameter(PropertyInfo p, int count)
+        {
+            return this[p.Type][count];
+        }
     }
 }

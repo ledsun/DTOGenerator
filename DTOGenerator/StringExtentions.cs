@@ -16,5 +16,12 @@ namespace DTOGenerator
                     .Select(m => m.Substring(0, 1) + m.Substring(1).ToLower())
           );
         }
+
+        public static string TableNameToPropertyName(this string tableName)
+        {
+            return tableName
+                .Substring(2)
+                .SnakeCaseToCamelCase();
+        }
     }
 }

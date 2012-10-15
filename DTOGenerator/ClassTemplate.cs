@@ -12,7 +12,7 @@ namespace DTOGenerator
     using System;
     
     
-    #line 1 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+    #line 1 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "10.0.0.0")]
     public partial class ClassTemplate : ClassTemplateBase
     {
@@ -22,14 +22,14 @@ namespace DTOGenerator
                     "m.Text;\r\n\r\nnamespace Jdip.Qdbs.Model\r\n{\r\n    /// <summary>\r\n    /// データクラスです。\r\n " +
                     "   /// </summary>\r\n    public class ");
             
-            #line 12 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 12 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_classData.ClassName));
             
             #line default
             #line hidden
             this.Write(" : DTOBase, IPatientId\r\n    {\r\n");
             
-            #line 14 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 14 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
  foreach (var p in _classData.Properties)
  { 
             
@@ -37,35 +37,35 @@ namespace DTOGenerator
             #line hidden
             this.Write("        public ");
             
-            #line 16 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(p.Declare));
+            #line 16 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(p.VariableDeclare));
             
             #line default
             #line hidden
             this.Write(" { get; private set; }\r\n");
             
-            #line 17 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 17 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
  } 
             
             #line default
             #line hidden
             this.Write("\r\n        public ");
             
-            #line 19 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 19 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_classData.ClassName));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 19 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 19 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_classData.ConstructorPalameters));
             
             #line default
             #line hidden
             this.Write(")\r\n        {\r\n");
             
-            #line 21 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 21 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
  foreach (var p in _classData.Properties)
  { 
             
@@ -73,14 +73,14 @@ namespace DTOGenerator
             #line hidden
             this.Write("            ");
             
-            #line 23 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(p.ConstructorProcess));
+            #line 23 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(p.AssigneProperty));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 24 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 24 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
  } 
             
             #line default
@@ -89,14 +89,14 @@ namespace DTOGenerator
                     "object obj)\r\n        {\r\n            if (obj == null || GetType() != obj.GetType(" +
                     "))\r\n                return false;\r\n\r\n            var other = (");
             
-            #line 33 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 33 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_classData.ClassName));
             
             #line default
             #line hidden
             this.Write(")obj;\r\n            return ");
             
-            #line 34 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 34 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_classData.EqualsProcess));
             
             #line default
@@ -104,7 +104,7 @@ namespace DTOGenerator
             this.Write(";\r\n        }\r\n\r\n        public override int GetHashCode()\r\n        {\r\n           " +
                     " return ");
             
-            #line 39 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 39 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_classData.GetHashCodeProcess));
             
             #line default
@@ -112,7 +112,7 @@ namespace DTOGenerator
             this.Write(";\r\n        }\r\n        #endregion\r\n\r\n        /// <summary>\r\n        /// テスト用のダミーデー" +
                     "タを返します。\r\n        /// </summary>\r\n");
             
-            #line 46 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 46 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
  for (var i = 0; i < _classData.CountID; i++)
  { 
             
@@ -120,35 +120,35 @@ namespace DTOGenerator
             #line hidden
             this.Write("        public static ");
             
-            #line 48 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 48 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_classData.ClassName));
             
             #line default
             #line hidden
             this.Write(" Dummy(");
             
-            #line 48 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 48 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_classData.GetDummyParameters( i + 1 )));
             
             #line default
             #line hidden
             this.Write(")\r\n        {\r\n            return new ");
             
-            #line 50 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 50 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_classData.ClassName));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 50 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 50 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_classData.GetDummyConstructorParameters(i)));
             
             #line default
             #line hidden
             this.Write(");\r\n        }\r\n\r\n");
             
-            #line 53 "C:\Users\nakajima\DTOGenerator\DTOGenerator\DTOGenerator\ClassTemplate.tt"
+            #line 53 "C:\Users\nakajima\DTOGenerator\DTOGenerator\ClassTemplate.tt"
  } 
             
             #line default
